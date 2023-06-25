@@ -92,6 +92,6 @@ def analyse_email(email: Email):
         "category": category,
         "nextStep": nextStep,
         "NameSender" : namesender,
-        "ReplyMail":"replymail
+        "ReplyMail" : replymail
     }
 
