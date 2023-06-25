@@ -39,9 +39,17 @@ function_descriptions = [
                 "nextStep":{
                     "type": "string",
                     "description": "What is the suggested next step to move this forward?"
+                },
+                "namesender":{
+                    "type": "string",
+                    "description": "What is the name of the individual that sent the mail?"
+                },
+                "replymail":{
+                    "type": "string",
+                    "description": "A friendly and personal response to the mail from the company Uponors technical service department?"
                 }
             },
-            "required": ["companyName", "amount", "product", "priority", "category", "nextStep"]
+            "required": ["companyName", "amount", "product", "priority", "category", "nextStep","replymail","namesender" ]
         }
     }
 ]
@@ -82,6 +90,8 @@ def analyse_email(email: Email):
         "amount": amount,
         "priority": priority,
         "category": category,
-        "nextStep": nextStep
+        "nextStep": nextStep,
+        "NameSender" : namesender,
+        "ReplyMail":"replymail
     }
 
