@@ -49,7 +49,7 @@ function_descriptions = [
                     "description": "A friendly and personal response to the mail from the company Uponors technical service department?"
                 }
             },
-            "required": ["companyName", "amount", "product", "priority", "category", "nextStep","replymail","namesender" ]
+            "required": ["companyName", "amount", "product", "priority", "category", "nextStep", "replymail", "namesender" ]
         }
     }
 ]
@@ -65,7 +65,7 @@ def read_root():
 @app.post("/")
 def analyse_email(email: Email):
     content = email.content
-    query = f"Please extract key information from this email: {content} "
+    query = f"Please extract key information from this email and prepare an answer: {content} "
 
     messages = [{"role": "user", "content": query}]
 
@@ -83,6 +83,8 @@ def analyse_email(email: Email):
     amount = eval(arguments).get("amount")
     category = eval(arguments).get("category")
     nextStep = eval(arguments).get("nextStep")
+    namesender = eval(arguments).get("namesender")
+    replymail = eval(arguments).get("replymail")
 
     return {
         "companyName": companyName,
