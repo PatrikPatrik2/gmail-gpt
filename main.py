@@ -47,9 +47,13 @@ function_descriptions = [
                 "replymail":{
                     "type": "string",
                     "description": "A friendly and personal response to the mail from the company Uponors technical service department?"
+                },
+                "replymailadress":{
+                    "type": "string",
+                    "description": "the email of the person sending the mail. This email is not uponordummyacount@gmail.com"
                 }
             },
-            "required": ["companyName", "amount", "product", "priority", "category", "nextStep", "replymail", "namesender" ]
+            "required": ["companyName", "amount", "product", "priority", "category", "nextStep", "replymail", "namesender" , "replymailadress"]
         }
     }
 ]
@@ -85,6 +89,9 @@ def analyse_email(email: Email):
     nextStep = eval(arguments).get("nextStep")
     namesender = eval(arguments).get("namesender")
     replymail = eval(arguments).get("replymail")
+    replymailadress = eval(arguments).get("replymailadress")
+
+    replymailadress
 
     return {
         "companyName": companyName,
@@ -94,6 +101,7 @@ def analyse_email(email: Email):
         "category": category,
         "nextStep": nextStep,
         "NameSender" : namesender,
-        "ReplyMail" : replymail
+        "ReplyMail" : replymail,
+        "ReplyMailAdress" : replymailadress
     }
 
