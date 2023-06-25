@@ -18,7 +18,7 @@ function_descriptions = [
             "properties": {
                 "companyName": {
                     "type": "string",
-                    "description": "the name of the company from which the mail was sent to, the company requesting the sales or service"
+                    "description": "the name of the company from which the mail was sent to, the company requesting the sales or service. The company name should not be Uponor"
                 },                        
                 "priority": {
                     "type": "string",
