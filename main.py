@@ -18,7 +18,7 @@ function_descriptions = [
             "properties": {
                 "companyName": {
                     "type": "string",
-                    "description": "the name of the company that sent the email"
+                    "description": "the name of the company from which the mail was sent to, the company requesting the sales or service"
                 },                        
                 "priority": {
                     "type": "string",
