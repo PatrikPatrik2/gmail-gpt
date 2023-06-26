@@ -94,7 +94,7 @@ def analyse_email(email: Email):
     namesender = eval(arguments).get("namesender")
     replymail = eval(arguments).get("replymail")
     replymailadress = eval(arguments).get("replymailadress")
-    sentiments = eval(arguments).get("sentiment")
+    sentiment = eval(arguments).get("sentiment")
 
 
     return {
