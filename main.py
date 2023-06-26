@@ -106,7 +106,7 @@ def analyse_email(email: Email):
         "nextStep": nextStep,
         "NameSender" : namesender,
         "ReplyMail" : replymail,
-        "ReplyMailAdress" : replymailadress
+        "ReplyMailAdress" : replymailadress,
         "Sentiment" : sentiment
     }
 
