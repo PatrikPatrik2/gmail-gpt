@@ -51,9 +51,13 @@ function_descriptions = [
                 "replymailadress":{
                     "type": "string",
                     "description": "the email of the person sending the mail. This email is not uponordummyacount@gmail.com"
+                },
+                "sentiment":{
+                    "type": "string",
+                    "description": "Rate the sentiment in the mail on a scale 1 to 10, where 1 is very negative and 10 is very positive"
                 }
             },
-            "required": ["companyName", "amount", "product", "priority", "category", "nextStep", "replymail", "namesender" , "replymailadress"]
+            "required": ["companyName", "amount", "product", "priority", "category", "nextStep", "replymail", "namesender" , "replymailadress", "sentiment"]
         }
     }
 ]
@@ -90,8 +94,8 @@ def analyse_email(email: Email):
     namesender = eval(arguments).get("namesender")
     replymail = eval(arguments).get("replymail")
     replymailadress = eval(arguments).get("replymailadress")
+    sentiments = eval(arguments).get("sentiment")
 
-    replymailadress
 
     return {
         "companyName": companyName,
@@ -103,5 +107,6 @@ def analyse_email(email: Email):
         "NameSender" : namesender,
         "ReplyMail" : replymail,
         "ReplyMailAdress" : replymailadress
+        "Sentiment" : sentiment
     }
 
