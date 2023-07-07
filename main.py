@@ -79,7 +79,6 @@ def analyse_email(email: Email):
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0613",
-        #model="gpt-4",
         messages=messages,
         functions = function_descriptions,
         function_call="auto"
@@ -110,4 +109,3 @@ def analyse_email(email: Email):
         "ReplyMailAdress" : replymailadress,
         "Sentiment" : sentiment
     }
-
