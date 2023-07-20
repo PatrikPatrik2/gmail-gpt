@@ -54,7 +54,7 @@ function_descriptions = [
                 },
                 "technichal_question":{
                     "type": "string",
-                    "description": "if the mail contains questions regarding technichal support, summarize the technical support question"
+                    "description": "if the mail contains questions regarding technichal support, summarize the technical support question in a neutral way, this will be used for a vector search"
                 },
                 "sentiment":{
                     "type": "string",
