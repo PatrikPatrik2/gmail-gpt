@@ -26,7 +26,7 @@ function_descriptions = [
                 },
                 "category": {
                     "type": "string",
-                    "description": "Try to categorise this email into categories like those: 1. Sales 2. customer support; 3. consulting; 4. partnership; etc."
+                    "description": "Try to categorise this email into categories like those: 1. Sales 2. customer support; 3. consulting; 4. Technichal support; etc."
                 },
                 "product": {
                     "type": "string",
@@ -51,6 +51,10 @@ function_descriptions = [
                 "replymailadress":{
                     "type": "string",
                     "description": "the email of the person sending the mail. This email is not uponordummyacount@gmail.com"
+                },
+                "technichal_question":{
+                    "type": "string",
+                    "description": "if the mail contains questions regarding technichal support, summarize the technical support question"
                 },
                 "sentiment":{
                     "type": "string",
@@ -96,6 +100,7 @@ def analyse_email(email: Email):
     replymail = eval(arguments).get("replymail")
     replymailadress = eval(arguments).get("replymailadress")
     sentiment = eval(arguments).get("sentiment")
+    technichal_question = eval(arguments).get("technichal_question")
 
 
     return {
@@ -108,5 +113,6 @@ def analyse_email(email: Email):
         "NameSender" : namesender,
         "ReplyMail" : replymail,
         "ReplyMailAdress" : replymailadress,
+        "Technichal_question" : technichal_question,
         "Sentiment" : sentiment
     }
