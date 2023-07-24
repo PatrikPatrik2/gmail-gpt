@@ -46,7 +46,7 @@ function_descriptions = [
                 },
                 "replymail":{
                     "type": "string",
-                    "description": "A friendly and personal response to the mail from the company Uponors technical service department?"
+                    "description": "A friendly and personal response to the mail from the company Uponors customer support department. If the question is a request for quotation reply that the the message has been forwarded to the Uponor Sales Department. If the question regards techical support, respond that the mail has been forwarded to the technical support department"
                 },
                 "replymailadress":{
                     "type": "string",
